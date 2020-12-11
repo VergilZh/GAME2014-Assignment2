@@ -715,8 +715,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1308146923}
-        m_TargetAssemblyTypeName: BackButtonBehaviour, Assembly-CSharp
-        m_MethodName: OnBackButtonPressed
+        m_TargetAssemblyTypeName: ButtonManagement, Assembly-CSharp
+        m_MethodName: OnMainMenuButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1308146918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d8fcf506bc503145b78724c5ce4bdf1, type: 3}
+  m_Script: {fileID: 11500000, guid: fe75dda6f79b7af4fbac5b82c010a92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1554445998
@@ -939,8 +939,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2089628669}
-        m_TargetAssemblyTypeName: MenuButtonBehaviour, Assembly-CSharp
-        m_MethodName: OnMenuButtonPressed
+        m_TargetAssemblyTypeName: ButtonManagement, Assembly-CSharp
+        m_MethodName: OnStartButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2089628664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50e18bec59d3984fbcbdce449da09ff, type: 3}
+  m_Script: {fileID: 11500000, guid: fe75dda6f79b7af4fbac5b82c010a92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2115234200

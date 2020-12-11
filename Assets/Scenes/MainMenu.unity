@@ -207,8 +207,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 621395841}
-        m_TargetAssemblyTypeName: MenuButtonBehaviour, Assembly-CSharp
-        m_MethodName: OnMenuButtonPressed
+        m_TargetAssemblyTypeName: ButtonManagement, Assembly-CSharp
+        m_MethodName: OnStartButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 621395836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50e18bec59d3984fbcbdce449da09ff, type: 3}
+  m_Script: {fileID: 11500000, guid: fe75dda6f79b7af4fbac5b82c010a92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &725591305
@@ -707,7 +707,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1964706823}
-        m_TargetAssemblyTypeName: InstructionButtonBehaviour, Assembly-CSharp
+        m_TargetAssemblyTypeName: ButtonManagement, Assembly-CSharp
         m_MethodName: OnInstructionButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1964706818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faa71393b74c01e47bd8f501ebe1e5e4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe75dda6f79b7af4fbac5b82c010a92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2082106006
