@@ -8,10 +8,11 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    //public AudioSource sword;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //sword = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
     private void _Attack()
     {
         animator.SetInteger("AnimState", 3);
+        GetComponent<AudioSource>().Play();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach(Collider2D enemy in hitEnemies)
