@@ -5,20 +5,19 @@ using UnityEngine;
 public class EnemyBehaviourScript : MonoBehaviour
 {
     public float runForce;
-    public int health;
     public Transform lookAheadPoint;
     public LayerMask collisionLayer;
     public bool isGroundAhead;
+    public AudioSource hitSound;
     private Rigidbody2D rigidbody2D;
     private Animator e_animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         e_animator = GetComponent<Animator>();
-
-        health = 2;
     }
 
     // Update is called once per frame
@@ -50,6 +49,7 @@ public class EnemyBehaviourScript : MonoBehaviour
     public void _Death()
     {
         e_animator.SetInteger("EnemyState", 1);
+        hitSound.Play();
         runForce = 1;
         Debug.Log("hit");
     }
