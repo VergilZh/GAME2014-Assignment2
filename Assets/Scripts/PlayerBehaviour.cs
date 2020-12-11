@@ -18,11 +18,11 @@ public class PlayerBehaviour : MonoBehaviour
     public Transform lookAheadPoint;
     public LayerMask collisionGroundLayer;
     public Animator HealthHUB;
+    public AudioSource loseSound;
     
 
     private Rigidbody2D m_rigidBody2D;
     private Animator m_animator;
-    private Collider2D m_attackCollider;
     private RaycastHit2D groundHit;
 
 
@@ -31,7 +31,6 @@ public class PlayerBehaviour : MonoBehaviour
     {
         m_rigidBody2D = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
-        m_attackCollider = GetComponent<EdgeCollider2D>();
         isJumping = false;
     }
 
@@ -105,6 +104,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             transform.position = spawnPoint.position;
             playerHealth -= 1;
+            loseSound.Play();
             HealthHUB.SetInteger("HealthNum", playerHealth);
         }
 
