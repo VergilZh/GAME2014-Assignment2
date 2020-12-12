@@ -40,6 +40,8 @@ public class PlayerBehaviour : MonoBehaviour
         _Move();
         _LookAhead();
 
+        HealthHUB.SetInteger("HealthNum", playerHealth);
+
 
         if (playerHealth <= 0)
         {
@@ -66,16 +68,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else if (Input.GetKey("w") && !isJumping)
         {
-            if(isGround)
-            {
-                m_rigidBody2D.AddForce(Vector2.up * verticalForce * Time.deltaTime);
-                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-                m_animator.SetInteger("AnimState", 2);
-                isJumping = true;
-            }
-            else
-            {
-            }
+            _Jump();
         }
         //else if (Input.GetButton("Fire1") && !isJumping)
         //{
@@ -95,6 +88,20 @@ public class PlayerBehaviour : MonoBehaviour
         isGround = (groundHit) ? true : false;
         Debug.DrawLine(transform.position, lookAheadPoint.position, Color.green);
         
+    }
+
+    public void _Jump()
+    {
+        if (isGround)
+        {
+            m_rigidBody2D.AddForce(Vector2.up * verticalForce * Time.deltaTime);
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            m_animator.SetInteger("AnimState", 2);
+            isJumping = true;
+        }
+        else
+        {
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -33,6 +33,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 211225486056030744}
+  - {fileID: 6947842390992809260}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -119,11 +120,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runForce: 0
-  lookAheadPoint: {fileID: 0}
+  lookAheadPoint: {fileID: 211225486056030744}
+  checkAttackRange: {fileID: 6947842390992809260}
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   isGroundAhead: 0
+  isLookPlayer: 0
+  hitSound: {fileID: 0}
 --- !u!50 &6263222650272292054
 Rigidbody2D:
   serializedVersion: 4
@@ -200,4 +207,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1153607622076789634}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7985348526060104630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6947842390992809260}
+  m_Layer: 9
+  m_Name: CheckPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6947842390992809260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985348526060104630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1153607622076789634}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

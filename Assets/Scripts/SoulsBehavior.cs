@@ -23,6 +23,7 @@ public class SoulsBehavior : MonoBehaviour
             if(other.gameObject.GetComponent<PlayerBehaviour>().playerHealth < 4)
             {
                 other.gameObject.GetComponent<PlayerBehaviour>().playerHealth += 1;
+                Score.gameScore += 10;
                 Destroy(gameObject);
             }
             

@@ -6,8 +6,11 @@ public class EnemyBehaviourScript : MonoBehaviour
 {
     public float runForce;
     public Transform lookAheadPoint;
+    public Transform checkAttackRange;
     public LayerMask collisionLayer;
+    public LayerMask playerLayer;
     public bool isGroundAhead;
+    public bool isLookPlayer;
     public AudioSource hitSound;
     private Rigidbody2D rigidbody2D;
     private Animator e_animator;
@@ -25,11 +28,12 @@ public class EnemyBehaviourScript : MonoBehaviour
     {
         _Move();
         _lookAhead();
+        _lookPlayer();
     }
 
     private void _Move()
     {
-        if(isGroundAhead)
+        if (isGroundAhead)
         {
             rigidbody2D.AddForce(Vector2.left * runForce * Time.deltaTime * transform.localScale.x);
             rigidbody2D.velocity *= 0.9f;
@@ -46,10 +50,19 @@ public class EnemyBehaviourScript : MonoBehaviour
         Debug.DrawLine(transform.position, lookAheadPoint.position, Color.red);
     }
 
+    private void _lookPlayer()
+    {
+        isLookPlayer = Physics2D.Linecast(transform.position, checkAttackRange.position, playerLayer);
+        Debug.DrawLine(transform.position, checkAttackRange.position, Color.green);
+    }
+
+
+
     public void _Death()
     {
         e_animator.SetInteger("EnemyState", 1);
         hitSound.Play();
+        Score.gameScore += 20;
         runForce = 1;
         Debug.Log("hit");
     }

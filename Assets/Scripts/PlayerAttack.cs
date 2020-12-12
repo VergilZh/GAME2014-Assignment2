@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    private void _Attack()
+    public void _Attack()
     {
         animator.SetInteger("AnimState", 3);
         swordSound.Play();
