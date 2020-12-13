@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/*
+    File Name: PlayerBehaviour.cs
+    Student Name: Han Zhan
+    Student ID: 101141379
+    Date last Modified: 2020/12/13
+    Program description: Player action save at here.
+    Revision History:
+    2020/12/11 Add joystick and player movement.
+    2020/12/11 Set player health.
+    2020/12/11 Add player stand ground check.
+    2020/12/11 Add player lose sound.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -55,14 +68,14 @@ public class PlayerBehaviour : MonoBehaviour
         if (joystick.Horizontal > joystickHorizontalSensitivity || Input.GetKey("d"))
         {
             // move right
-            m_rigidBody2D.AddForce(Vector2.right * horizontalForce * Time.deltaTime);
+            m_rigidBody2D.AddForce(Vector2.right * horizontalForce);
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             m_animator.SetInteger("AnimState", 1);
         }
         else if (joystick.Horizontal < -joystickHorizontalSensitivity || Input.GetKey("a"))
         {
             // move left
-            m_rigidBody2D.AddForce(Vector2.left * horizontalForce * Time.deltaTime);
+            m_rigidBody2D.AddForce(Vector2.left * horizontalForce);
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
             m_animator.SetInteger("AnimState", 1);
         }
@@ -94,10 +107,10 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (isGround)
         {
-            m_rigidBody2D.AddForce(Vector2.up * verticalForce * Time.deltaTime);
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            m_rigidBody2D.AddForce(Vector2.up * verticalForce);
+            //transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             m_animator.SetInteger("AnimState", 2);
-            isJumping = true;
+            //isJumping = true;
         }
         else
         {

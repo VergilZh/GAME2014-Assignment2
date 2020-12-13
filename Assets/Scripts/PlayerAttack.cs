@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/*
+    File Name: PlayerAttack.cs
+    Student Name: Han Zhan
+    Student ID: 101141379
+    Date last Modified: 2020/12/13
+    Program description: Make player attack with the enemy.
+    Revision History:
+    2020/12/11 Add attack animator.
+    2020/12/11 Add attack point and set the attack range.
+    2020/12/11 Player can kill the enemy.
+    2020/12/11 Add attack sound effect.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

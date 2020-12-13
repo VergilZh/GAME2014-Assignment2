@@ -1,4 +1,14 @@
-﻿using System.Collections;
+﻿/*
+    File Name: MovingPlatformControlller.cs
+    Student Name: Han Zhan
+    Student ID: 101141379
+    Date last Modified: 2020/12/13
+    Program description: Make platform movement.
+    Revision History:
+    2020/12/11 Add moving platform.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

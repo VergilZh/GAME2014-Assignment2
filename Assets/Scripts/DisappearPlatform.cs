@@ -1,4 +1,14 @@
-﻿using System.Collections;
+﻿/*
+    File Name: DisappearPlatform.cs
+    Student Name: Han Zhan
+    Student ID: 101141379
+    Date last Modified: 2020/12/13
+    Program description: Make a platform can disappear.
+    Revision History:
+    2020/12/11 Add disappear platform.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

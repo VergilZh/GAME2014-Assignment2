@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/*
+    File Name: EnemyBehaviourScript.cs
+    Student Name: Han Zhan
+    Student ID: 101141379
+    Date last Modified: 2020/12/13
+    Program description: Set enemy behaviour.
+    Revision History:
+    2020/12/11 Add enemy rigidboday and collision.
+    2020/12/11 Add enemy move and death animator.
+    2020/12/11 Add enemy movement and check groud
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,7 +47,7 @@ public class EnemyBehaviourScript : MonoBehaviour
     {
         if (isGroundAhead)
         {
-            rigidbody2D.AddForce(Vector2.left * runForce * Time.deltaTime * transform.localScale.x);
+            rigidbody2D.AddForce(Vector2.left * runForce * transform.localScale.x);
             rigidbody2D.velocity *= 0.9f;
         }
         else
@@ -63,7 +75,7 @@ public class EnemyBehaviourScript : MonoBehaviour
         e_animator.SetInteger("EnemyState", 1);
         hitSound.Play();
         Score.gameScore += 20;
-        runForce = 1;
+        runForce = 0;
         Debug.Log("hit");
     }
 
