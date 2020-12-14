@@ -5,7 +5,7 @@
     Date last Modified: 2020/12/13
     Program description: Make souls player can take.
     Revision History:
-    2020/12/11 Add souls perfb.
+    2020/12/11 Add souls perfab.
     2020/12/11 Player can take the souls.
  */
 

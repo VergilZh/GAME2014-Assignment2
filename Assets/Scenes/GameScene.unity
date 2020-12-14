@@ -3636,11 +3636,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1153607622076789634, guid: 9ef2e2bbfd8327b4e912bcdfd2db9c66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.65248
+      value: 104.62
       objectReference: {fileID: 0}
     - target: {fileID: 1153607622076789634, guid: 9ef2e2bbfd8327b4e912bcdfd2db9c66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.562222
+      value: -1.54
       objectReference: {fileID: 0}
     - target: {fileID: 1153607622076789634, guid: 9ef2e2bbfd8327b4e912bcdfd2db9c66, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3681,6 +3681,10 @@ PrefabInstance:
     - target: {fileID: 1153607622076789635, guid: 9ef2e2bbfd8327b4e912bcdfd2db9c66, type: 3}
       propertyPath: m_Name
       value: Goblin3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153607622076789635, guid: 9ef2e2bbfd8327b4e912bcdfd2db9c66, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1153607622076789644, guid: 9ef2e2bbfd8327b4e912bcdfd2db9c66, type: 3}
       propertyPath: m_SortingOrder

@@ -5,9 +5,9 @@
     Date last Modified: 2020/12/13
     Program description: Set enemy behaviour.
     Revision History:
-    2020/12/11 Add enemy rigidboday and collision.
+    2020/12/11 Add enemy rigidbody and collision.
     2020/12/11 Add enemy move and death animator.
-    2020/12/11 Add enemy movement and check groud
+    2020/12/11 Add enemy movement and check ground
  */
 
 using System.Collections;
